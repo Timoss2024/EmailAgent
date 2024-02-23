@@ -24,7 +24,7 @@ pinecone.init(api_key=pinecone_api_key, environment=pinecone_enviroment)
 
 embeddings = OpenAIEmbeddings()
 # Create Pinecone vectorstore instance 
-vectorstore = Pinecone.from_existing_index(index_name="new", embedding=embeddings, text_key= "text",namespace="salesdocs2")
+vectorstore = Pinecone.from_existing_index(index_name="chattutorial", embedding=embeddings, text_key= "text",namespace="salesdocs2")
 
 retriever = vectorstore.as_retriever()
 
